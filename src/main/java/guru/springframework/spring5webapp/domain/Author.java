@@ -21,13 +21,7 @@ public class Author {
     private Set<Book> books = new HashSet<>();
 
 
-//    public Author(final String firstName, final String lastName, final Set<Book> books) {
-//        this.firstName = firstName;
-//        this.lastName = lastName;
-//        this.books = books;
-//    }
-
-    public Author(final String firstName, final String lastName) {
+    public Author(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
     }
