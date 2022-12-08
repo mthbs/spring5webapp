@@ -9,6 +9,7 @@ import guru.springframework.spring5webapp.repositories.PublisherRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+
 /**
  * Created by jt on 12/23/19.
  */
@@ -16,7 +17,9 @@ import org.springframework.stereotype.Component;
 public class BootStrapData implements CommandLineRunner {
 
     private final AuthorRepository authorRepository;
+
     private final BookRepository bookRepository;
+
     private final PublisherRepository publisherRepository;
 
     public BootStrapData(AuthorRepository authorRepository, BookRepository bookRepository, PublisherRepository publisherRepository) {
@@ -43,6 +46,7 @@ public class BootStrapData implements CommandLineRunner {
         Book ddd = new Book("Domain Driven Design", "123123");
         eric.getBooks().add(ddd);
         ddd.getAuthors().add(eric);
+        ddd.setPublisher(publisher);
 
         authorRepository.save(eric);
         bookRepository.save(ddd);
